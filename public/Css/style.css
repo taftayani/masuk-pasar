@@ -1,0 +1,74 @@
+.bg-login{
+    background-image: url("../static/background/login-bg.svg");
+    background-repeat: no-repeat;
+    height: 700px;
+    margin-top: 50px;
+}
+.card-form{
+    background-color: white;
+    height: 100%;
+    padding-bottom: 50px;
+    margin-top: 130px;
+    width: 40%;
+    float: right;
+    margin-left: auto;
+    margin-right: 15%;
+    box-shadow: 4px 4px 10px #C4C4C4;
+    border-radius: 10px;
+}
+.card-form-second{
+    background-color: white;
+    height: 100%;
+    padding-bottom: 50px;
+    margin-top: 130px;
+    width: auto;
+    box-shadow: 4px 4px 10px #C4C4C4;
+    border-radius: 10px;
+}
+h1,h2,h3,h4,h5,h6,p,label,button,input{
+    font-family: 'Ubuntu';
+}
+
+.login-label{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #BEB1AF;
+}
+
+.input-login{
+    width: 93%;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 10px;
+    color: #C4C4C4;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #F2F2F2;
+}
+.btn-login{
+    border: none;
+    background-color: rgba(151, 201, 61, 0.91);;
+    box-shadow: 0.948454px 0.948454px 9.48454px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding-top: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+}
+.heading-login{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: normal;
+    border-bottom: 2px solid #BEB1AF;
+    padding-bottom: 20px;
+}
