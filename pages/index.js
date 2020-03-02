@@ -1,16 +1,21 @@
 import Head from '../component/Head'
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 
-export default class index extends React.Component {
+function Login(){
+    const [login, setlogin] = useState('')
 
-  render() {
+    useEffect(() => {
+
+    })
+
+    
     return (
       <div>
         <Head />
         <nav class="navbar navbar-expand-lg navbar-light bg-light"
           style={{ paddingTop: '20px', paddingBottom: '20px', boxShadow: '4px 4px 10px #DBD4D4' }}>
           <div className="container">
-            <a class="navbar-brand" style={{ marginLeft: 'auto', marginRight: 'auto' }} href="#"><img src="/static/Icon/icon.svg" /></a>
+            <a class="navbar-brand" style={{ marginLeft: 'auto', marginRight: 'auto' }} href="#"><img src="/static/Logo/logo.svg" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +29,7 @@ export default class index extends React.Component {
                 <div className="container">
                   <h1 className="heading-login">Silakan Masuk</h1>
                 </div>
-                <div className="container" style={{ paddingLeft: '30px',paddingTop:'20px'}}>
+                <div className="container" style={{ paddingLeft: '30px', paddingTop: '20px' }}>
                   <div>
                     <div className="row">
                       <label className="login-label">Username</label>
@@ -33,7 +38,7 @@ export default class index extends React.Component {
                       <input className="input-login" placeholder="Masukan Username" />
                     </div>
 
-                    <div style={{marginTop:'30px'}}>
+                    <div style={{ marginTop: '30px' }}>
                       <div className="row">
                         <label className="login-label">Password</label>
                       </div>
@@ -46,9 +51,9 @@ export default class index extends React.Component {
                 </div>
 
                 <div className="container">
-                   <div className="row">
-                   <button className="btn-login" onClick={()=>window.location = "/dashboard/masukpasar"}>Masuk</button>
-                   </div>
+                  <div className="row">
+                    <button className="btn-login" onClick={() => window.location = "/dashboard/masukpasar"}>Masuk</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -57,6 +62,6 @@ export default class index extends React.Component {
         </div>
       </div>
     )
-  }
 
 }
+export default Login
