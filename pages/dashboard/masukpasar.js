@@ -39,13 +39,25 @@ export default class index extends React.Component {
                     <div className="container">
                         <div className="row">
                            <div className="col-3">
-                           <div className="card-form-second" style={{height:'40%'}}>
-                               
+                           <div className="card-form-second" style={{height:'auto'}}>
+                               <div className="container">
+                                   <div className="row" style={{paddingTop:'30px',paddingBottom:'30px',borderBottom:'1px solid #BEB1AF'}}>
+                                       <a style={{display:'block',marginLeft:'auto',marginRight:'auto'}}>Data Konsumen</a>
+                                   </div>
+                                   <div className="row" style={{paddingTop:'30px',paddingBottom:'0px'}}>
+                                       <a style={{display:'block',marginLeft:'auto',marginRight:'auto'}}>Data Produk</a>
+                                   </div>
+                               </div>
                             </div>
                            </div>
                            <div className="col-9">
                            <div className="card-form-second">
-                               
+                           <div className="container">
+                                   <div className="row" style={{paddingTop:'30px',paddingBottom:'30px',borderBottom:'1px solid #BEB1AF'}}>
+                                       <a style={{display:'block',marginLeft:'4%',marginRight:'5%'}}>Input Konsumen</a>
+                                       <a style={{display:'block',}}>List Produk</a>
+                                   </div>
+                               </div>
                             </div>
                            </div>
                         </div>
