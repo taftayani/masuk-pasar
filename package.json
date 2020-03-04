@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "node serve.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "express": "^4.17.1",
     "next": "9.2.2",
     "react": "16.12.0",
     "react-dom": "16.12.0"
