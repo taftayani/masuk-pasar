@@ -8,7 +8,7 @@
 }
 .card-form{
     background-color: white;
-    height: 100%;
+    height: auto;
     padding-bottom: 50px;
     margin-top: 130px;
     width: 40%;
@@ -20,7 +20,7 @@
 }
 .card-form-second{
     background-color: white;
-    height: 100%;
+    height: auto;
     padding-bottom: 50px;
     margin-top: 130px;
     width: auto;
@@ -73,4 +73,32 @@ h1,h2,h3,h4,h5,h6,p,label,button,input{
     font-weight: normal;
     border-bottom: 2px solid #BEB1AF;
     padding-bottom: 20px;
+}
+.heading-card-admin{
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #552D0F;
+}
+.label-card-admin{
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    font-weight: normal;
+    color: #BEB1AF;
+}
+.form-card{
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    background-color: rgba(242, 242, 242, 0.25);
+    padding:10px 10px 10px 10px;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+}
+input:active{
+    border: none;
 }

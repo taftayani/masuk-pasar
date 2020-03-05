@@ -1,14 +1,42 @@
 import Head from '../component/Head'
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import Axios from 'axios';
+import API from '../component/API/api'
 
-function Login(){
-    const [login, setlogin] = useState('')
+// function Login(){
+//     const [login, setlogin] = useState('')
 
-    useEffect(() => {
+//     useEffect(() => {
 
-    })
+//     })
 
-    
+
+
+
+// }
+// export default Login
+
+// without hooks
+export default class Login extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      Username: '',
+      Password: ''
+    }
+  }
+
+  onChangePassword() {
+    // Axios.post(API.LoginAdmin, {
+    //     user_name: this.state.Username,
+    //     password: this.state.Password
+    // }).then(response =>{
+    //   console.log(response)
+    // })
+    window.location = "/dashboard/masukpasar"
+  }
+  render() {
+    console.log(this.state)
     return (
       <div>
         <Head />
@@ -35,7 +63,13 @@ function Login(){
                       <label className="login-label">Username</label>
                     </div>
                     <div className="row">
-                      <input className="input-login" placeholder="Masukan Username" />
+                      <input onChange={(e)=>{
+                        this.setState({
+                          Username:e.target.value
+                        })
+                      }} 
+                      className="input-login" placeholder="Masukan Username" 
+                      value={this.state.Username ? this.state.Username :''}/>
                     </div>
 
                     <div style={{ marginTop: '30px' }}>
@@ -43,7 +77,12 @@ function Login(){
                         <label className="login-label">Password</label>
                       </div>
                       <div className="row">
-                        <input className="input-login" placeholder="Password Anda" />
+                        <input type="password"
+                        onChange={(e)=>{
+                          this.setState({
+                            Password:e.target.value
+                          })
+                        }}  className="input-login" placeholder="Password Anda" />
                       </div>
                     </div>
 
@@ -52,7 +91,7 @@ function Login(){
 
                 <div className="container">
                   <div className="row">
-                    <button className="btn-login" onClick={() => window.location = "/dashboard/masukpasar"}>Masuk</button>
+                    <button className="btn-login" onClick={this.onChangePassword.bind(this)}>Masuk</button>
                   </div>
                 </div>
               </div>
@@ -62,6 +101,5 @@ function Login(){
         </div>
       </div>
     )
-
+  }
 }
-export default Login
