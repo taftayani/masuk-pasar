@@ -27,7 +27,7 @@
     box-shadow: 4px 4px 10px #C4C4C4;
     border-radius: 10px;
 }
-h1,h2,h3,h4,h5,h6,p,label,button,input{
+h1,h2,h3,h4,h5,h6,p,label,button,input,a{
     font-family: 'Ubuntu';
 }
 
@@ -101,4 +101,42 @@ h1,h2,h3,h4,h5,h6,p,label,button,input{
 }
 input:active{
     border: none;
+}
+
+.logut-dashboard{
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    font-weight: 600;
+    color: #4B3030;
+}
+
+.active-dashboard{
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    font-weight: normal;
+    color: #4B3030;
+}
+
+.no-active-dashboard{
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    font-weight: normal;
+    color: #BEB1AF;
+}
+.active-tab-dashboard{
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    font-weight: normal;
+    color: #4B3030;
+}
+.no-active-tab-dashboard{
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    font-weight: normal;
+    color: #BEB1AF;
 }

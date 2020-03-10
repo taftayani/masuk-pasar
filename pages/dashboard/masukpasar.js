@@ -87,17 +87,17 @@ export default class index extends React.Component {
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Data Pasar <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link active-dashboard" href="#">Data Pasar <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Input Pesanan</a>
+                                    <a class="nav-link no-active-dashboard" href="#">Input Pesanan</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav" style={{ display: 'block', marginLeft: 'auto' }}>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Keluar <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link logut-dashboard" href="/">Keluar <span class="sr-only">(current)</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -111,10 +111,10 @@ export default class index extends React.Component {
                             <div className="card-form-second" style={{ height: 'auto' }}>
                                 <div className="container">
                                     <div className="row" style={{ paddingTop: '30px', paddingBottom: '30px', borderBottom: '1px solid #BEB1AF' }}>
-                                        <a style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}>Data Konsumen</a>
+                                        <a className="active-tab-dashboard" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto',color:'#4B3030'}}>Data Konsumen</a>
                                     </div>
                                     <div className="row" style={{ paddingTop: '30px', paddingBottom: '0px' }}>
-                                        <a style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}>Data Produk</a>
+                                        <a className="no-active-tab-dashboard" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto',color:'#BEB1AF'}}>Data Produk</a>
                                     </div>
                                 </div>
                             </div>
