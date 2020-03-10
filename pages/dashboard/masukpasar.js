@@ -7,7 +7,7 @@ export default class index extends React.Component {
         return (
             <div>
                 <Head />
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light"
                     style={{ paddingTop: '20px', paddingBottom: '20px', boxShadow: '4px 4px 10px #DBD4D4' }}>
                     <div className="container">
                         <a class="navbar-brand" href="#"><img src="/static/Icon/icon.svg" /></a>
