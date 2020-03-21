@@ -140,3 +140,19 @@ input:active{
     font-weight: normal;
     color: #BEB1AF;
 }
+.btn-input-customer{
+    background: rgba(151, 201, 61, 0.91);
+    box-shadow: 0.948454px 0.948454px 9.48454px rgba(0, 0, 0, 0.3);
+    border-radius: 9.48454px;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: white;
+    font-weight: 600;
+    width: 30%;
+    margin-top: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

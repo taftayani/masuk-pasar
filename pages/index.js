@@ -2,6 +2,7 @@ import Head from '../component/Head'
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import API from '../component/API/api'
+import {reactLocalStorage} from 'reactjs-localstorage'
 
 // function Login(){
 //     const [login, setlogin] = useState('')
@@ -28,22 +29,14 @@ export default class Login extends React.Component {
 
   onChangePassword(e) {
     e.preventDefault()
-    // Axios.post(API.LoginAdmin, {
-    //     user_name: this.state.Username,
-    //     password: this.state.Password
-    // }).then(response =>{
-    //   console.log(response)
-    // })
-    fetch(API.LoginAdmin,{
-      method : 'post',
-      body:{
-        user_name:this.state.Username,
-	      password:this.state.Password
-      }
+    Axios.post(API.LoginAdmin, {
+        user_name: this.state.Username,
+        password: this.state.Password
     }).then(response =>{
-      console.log('login',response)
+      console.log(response)
+      window.location = "/dashboard/masukpasar"
+      reactLocalStorage.setObject('Admin_user',response)
     })
-    window.location = "/dashboard/masukpasar"
   }
   render() {
     console.log(this.state)

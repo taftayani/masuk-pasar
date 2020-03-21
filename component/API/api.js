@@ -1,8 +1,8 @@
 
 export default class API{
     
-    static URL_MASTER = "http://masukpasar.id/rest/index.php/api/"
-    static LoginAdmin = API.URL_MASTER+ "auth/login"
+    static URL_MASTER = "http://192.168.55.107:8081/api/"
+    static LoginAdmin = API.URL_MASTER+"users/auth"
 }
 
 
