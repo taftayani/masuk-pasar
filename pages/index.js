@@ -29,9 +29,25 @@ export default class Login extends React.Component {
 
   onChangePassword(e) {
     e.preventDefault()
+<<<<<<< HEAD
     Axios.post(API.LoginAdmin, {
         user_name: this.state.Username,
         password: this.state.Password
+=======
+    // Axios.post(API.LoginAdmin, {
+    //     user_name: this.state.Username,
+    //     password: this.state.Password
+    // }).then(response =>{
+    //   console.log(response)
+    // })
+    fetch(API.LoginAdmin,{
+      method : 'post',
+      mode : 'no-cors',
+      body:{
+        user_name:this.state.Username,
+	      password:this.state.Password
+      }
+>>>>>>> 22640345c1f6d73a5964bd3a74c935a044d6e0d2
     }).then(response =>{
       console.log(response)
       window.location = "/dashboard/masukpasar"
@@ -43,12 +59,12 @@ export default class Login extends React.Component {
     return (
       <div>
         <Head />
-        <nav class="navbar navbar-expand-lg navbar-light bg-light"
+        <nav className="navbar navbar-expand-lg navbar-light bg-light"
           style={{ paddingTop: '20px', paddingBottom: '20px', boxShadow: '4px 4px 10px #DBD4D4' }}>
           <div className="container">
-            <a class="navbar-brand" style={{ marginLeft: 'auto', marginRight: 'auto' }} href="#"><img src="/static/Logo/logo.svg" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <a className="navbar-brand" style={{ marginLeft: 'auto', marginRight: 'auto' }} href="#"><img src="/static/Logo/logo.svg" /></a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
             </button>
           </div>
         </nav>
