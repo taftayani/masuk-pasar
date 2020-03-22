@@ -99,6 +99,18 @@ h1,h2,h3,h4,h5,h6,p,label,button,input,a{
     font-weight: 300;
     border-radius: 10px;
 }
+.form-card-second{
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    background-color: rgba(242, 242, 242, 0.25);
+    padding:10px 10px 10px 10px;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    height: 38px;
+}
 input:active{
     border: none;
 }
@@ -155,4 +167,53 @@ input:active{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.label-tabel{
+    font-size: 14px;
+    color: #BEB1AF;
+    letter-spacing: 0.04em;
+    font-weight: 300;
+    display: flex;
+}
+.list-tabel{
+    font-size: 14px;
+    color: #4B3030;
+    display: flex;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+}
+.edit-btn-table{
+    background: rgba(151, 201, 61, 0.5);
+    box-shadow: 0px 4px 18px #EDEDED;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.04em;
+    border: none;
+    width: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.delete-btn-table{
+    background: #F58B8B;
+    box-shadow: 0px 4px 18px #EDEDED;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.04em;
+    border: none;
+    width: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.table-consumen{
+    background: rgba(242, 242, 242, 0.25);
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    margin-bottom: 20px;
 }

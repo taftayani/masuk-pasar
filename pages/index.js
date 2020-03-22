@@ -29,30 +29,14 @@ export default class Login extends React.Component {
 
   onChangePassword(e) {
     e.preventDefault()
-<<<<<<< HEAD
     Axios.post(API.LoginAdmin, {
         user_name: this.state.Username,
         password: this.state.Password
-=======
-    // Axios.post(API.LoginAdmin, {
-    //     user_name: this.state.Username,
-    //     password: this.state.Password
-    // }).then(response =>{
-    //   console.log(response)
-    // })
-    fetch(API.LoginAdmin,{
-      method : 'post',
-      mode : 'no-cors',
-      body:{
-        user_name:this.state.Username,
-	      password:this.state.Password
-      }
->>>>>>> 22640345c1f6d73a5964bd3a74c935a044d6e0d2
     }).then(response =>{
       console.log(response)
-      window.location = "/dashboard/masukpasar"
       reactLocalStorage.setObject('Admin_user',response)
     })
+    window.location = "/dashboard/masukpasar"
   }
   render() {
     console.log(this.state)
