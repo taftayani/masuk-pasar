@@ -105,8 +105,4 @@ export default class Login extends React.Component {
       </div>
     )
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 3c0bfadd7766bea1b7cedb6860f50f4281c81b04
 }
