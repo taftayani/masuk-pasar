@@ -1,13 +1,22 @@
 import Head from '../../component/Head'
 import React from 'react'
 import CardConsumen from '../../component/MainPage/CardConsumen'
+import CardProduk from '../../component/MainPage/CardProduk'
 
 export default class index extends React.Component {
 
     constructor() {
         super()
         this.state = {
-            tab: 'input'
+            tab: 'product'
+        }
+    }
+    ListCard(){
+        if(this.state.tab == 'customer'){
+            return <CardConsumen/>
+        }
+        else{
+            return <CardProduk/>
         }
     }
     render() {
@@ -49,26 +58,38 @@ export default class index extends React.Component {
                             <div className="card-form-second" style={{ height: 'auto' }}>
                                 <div className="container">
                                     <div className="row" style={{ paddingTop: '30px', paddingBottom: '30px', borderBottom: '1px solid #BEB1AF' }}>
-                                        <a className="active-tab-dashboard" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', color: '#4B3030' }}>Data Konsumen</a>
+                                        <label className={`${this.state.tab == 'customer' ? 'active-tab-dashboard':'no-active-tab-dashboard'}`} 
+                                        style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto',cursor:'pointer'}}
+                                        onClick={()=>{
+                                            this.setState({
+                                                tab:'customer'
+                                            })
+                                        }}>
+                                        Data Konsumen</label>
                                     </div>
                                     <div className="row" style={{ paddingTop: '30px', paddingBottom: '0px' }}>
-                                        <a className="no-active-tab-dashboard" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', color: '#BEB1AF' }}>Data Produk</a>
+                                        <label className={`${this.state.tab == 'product' ? 'active-tab-dashboard':'no-active-tab-dashboard'}`}
+                                        style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+                                        onClick={()=>{
+                                            this.setState({
+                                                tab:'product'
+                                            })
+                                        }}>Data Produk</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-9">
-                            <CardConsumen/>
+                            {this.ListCard()}
                         </div>
                     </div>
                     <style>
                         {`
-                            .active-tab-dashboard-card{
-                                border-bottom : 2px solid #97C93D;
-                                padding-bottom: 20px;
+                            .active-tab-dashboard{
+                                color:#4B3030;
                                 cursor:pointer;
                             }
-                            .no-active-tab-dashboard-card{
+                            .no-active-tab-dashboard{
                                 color: #BEB1AF;
                                 cursor:pointer;
                             }

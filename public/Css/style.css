@@ -108,7 +108,7 @@ h1,h2,h3,h4,h5,h6,p,label,button,input,a{
     letter-spacing: 0.04em;
     line-height: 16px;
     font-weight: 300;
-    border-radius: 10px;
+    border-radius: 20px;
     height: 38px;
 }
 input:active{
@@ -216,4 +216,28 @@ input:active{
     width: 100%;
     border: 1px solid #C4C4C4;
     margin-bottom: 20px;
+}
+.form-input{
+    margin-top: 20px;
+}
+.img-background{
+    background: #C4C4C4;
+    border-radius: 10px;
+    height: 200px;
+}
+.btn-product{
+    display:  block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 10px;
+    box-shadow: 1.49414px 1.49414px 14.9414px rgba(0, 0, 0, 0.3);
+    background: white;
+    border-radius: 100px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #95C83D;
+    border: none;
 }
