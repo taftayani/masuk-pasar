@@ -8,7 +8,7 @@ export default class index extends React.Component {
     constructor() {
         super()
         this.state = {
-            tab: 'product'
+            tab: 'customer'
         }
     }
     ListCard(){

@@ -241,3 +241,14 @@ input:active{
     color: #95C83D;
     border: none;
 }
+.label-add-admin{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 14px;
+    align-items: center;
+    letter-spacing: 0.04em;
+    text-indent: 3.82347px;
+    color: #04715A;
+
+}

@@ -116,24 +116,37 @@ export default class index extends React.Component {
 
                     <div>
                         <div className="col-12">
-                            <h3 className="heading-card-admin">Alamat Konsumen</h3>
+                            <h3 className="heading-card-admin">Informasi Harga Jual</h3>
                         </div>
 
                         <div className="row">
-                            <div className="col-6">
+                            <div className="col-2">
                                 <div className="col-12">
-                                    <label className="label-card-admin">Kode pos</label>
-                                </div>
-                                <div className="col-12">
-                                    <input className="form-card" placeholder="Kode Pos" />
+                                    <input className="form-card" placeholder="Min Qty" />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-2">
                                 <div className="col-12">
-                                    <label className="label-card-admin">Kelurahan</label>
+                                    <input className="form-card" placeholder="Max Qty" />
                                 </div>
+                            </div>
+                            <div className="col-4">
                                 <div className="col-12">
-                                    <input className="form-card" placeholder="Kelurahan" />
+                                    <input className="form-card" placeholder="Total Margin (Rp)" />
+                                </div>
+                            </div>
+                            <div className="col-4">
+                                <div className="col-12">
+                                    <input className="form-card" style={{background:'#DBD4D4'}} placeholder="Rp." />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="container" style={{marginTop:'10px'}}>
+                            <div className="row">
+                                <div className="col-12">
+                                <img style={{marginRight:'10px'}} src="/static/Icon/add.svg"/>
+                                <label className="label-add-admin">Tambah Harga Jual</label>
                                 </div>
                             </div>
                         </div>
