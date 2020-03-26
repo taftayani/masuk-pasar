@@ -89,7 +89,7 @@ const List = ({ consumen }) => (
               {consumen.alamat.length > 1 && (
                 <ul>
                   {consumen.alamat.map(alamat => (
-                    <li>{`${alamat.alamat_detail}, ${alamat.kecamatan}, ${alamat.kelurahan}`}</li>
+                    <li key={alamat.id}>{`${alamat.alamat_detail}, ${alamat.kecamatan}, ${alamat.kelurahan}`}</li>
                   ))}
                 </ul>
               )}
