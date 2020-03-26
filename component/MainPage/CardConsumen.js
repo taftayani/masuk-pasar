@@ -65,10 +65,10 @@ export default class index extends React.Component {
 
             <div className="col-6">
               <div className="col-12">
-                <label className="label-card-admin">No Telp</label>
+                <label className="label-card-admin">Email</label>
               </div>
               <div className="col-12">
-                <input className="form-card" placeholder="Tuliskan No Telp" />
+                <input className="form-card" placeholder="Tuliskan Email" />
               </div>
             </div>
           </div>
