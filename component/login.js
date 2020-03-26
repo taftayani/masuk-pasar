@@ -56,7 +56,7 @@ export default class Login extends React.Component {
         <div className="container-fluid">
           <div className="container bg-login">
             <div className="row">
-              <div className="card-form">
+              <div className="col-12 col-xl-5 card-form">
                 <div className="container">
                   <h1 className="heading-login">Silakan Masuk</h1>
                 </div>

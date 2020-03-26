@@ -173,7 +173,7 @@ export default class index extends React.Component {
                 </div>
                 <div className="">
                     <div className="row">
-                        <div className="col-4">
+                        <div className="col-xl-4 col-12">
                             <div className="card-product">
                                 <div className="">
                                    <img src="/static/background/bg-1.svg" className="produk-img"/>
@@ -212,7 +212,7 @@ export default class index extends React.Component {
                             </div>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-xl-4 col-12">
                             <div className="card-product">
                                 <div className="">
                                    <img src="/static/background/bg-1.svg" className="produk-img"/>
@@ -241,7 +241,7 @@ export default class index extends React.Component {
                             </div>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-xl-4 col-12">
                             <div className="card-product">
                                 <div className="">
                                    <img src="/static/background/bg-1.svg" className="produk-img"/>

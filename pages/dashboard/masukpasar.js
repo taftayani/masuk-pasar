@@ -54,7 +54,7 @@ export default class index extends React.Component {
 
                 <div className="container" style={{ paddingBottom: '20px' }}>
                     <div className="row">
-                        <div className="col-3">
+                        <div className="col-xl-3 col-12">
                             <div className="card-form-second" style={{ height: 'auto' }}>
                                 <div className="container">
                                     <div className="row" style={{ paddingTop: '30px', paddingBottom: '30px', borderBottom: '1px solid #BEB1AF' }}>
@@ -79,7 +79,7 @@ export default class index extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-9">
+                        <div className="col-xl-9 col-12">
                             {this.ListCard()}
                         </div>
                     </div>
