@@ -31,8 +31,8 @@ export default class index extends React.Component {
           let filtered = [];
           res.data.values.map(kelurahan =>
             filtered.push({
-              value: kelurahan.id+' '+kelurahan.kodepos,
-              label: kelurahan.kelurahan+' - '+kelurahan.kabupaten
+              value: kelurahan.id + " " + kelurahan.kodepos,
+              label: kelurahan.kelurahan + " - " + kelurahan.kabupaten
             })
           );
           this.setState({ kelurahans: filtered });
@@ -102,7 +102,7 @@ export default class index extends React.Component {
               <h3 className="heading-card-admin">Alamat Konsumen</h3>
             </div>
             <div className="col-12">
-              <label className="label-card-admin">Katagori Pelanggan</label>
+              <label className="label-card-admin">Kelompok Alamat</label>
             </div>
             <div className="col-12" style={{ marginBottom: "20px" }}>
               <select className="form-card-second">
@@ -135,7 +135,10 @@ export default class index extends React.Component {
                     className="form-card"
                     style={{ background: "#DEDEDE" }}
                     placeholder="Kode Pos"
-                    value={this.state.kelurahan && this.state.kelurahan.value.split(' ')[1]}
+                    value={
+                      this.state.kelurahan &&
+                      this.state.kelurahan.value.split(" ")[1]
+                    }
                     disabled
                   />
                 </div>
