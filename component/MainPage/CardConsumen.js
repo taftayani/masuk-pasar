@@ -77,6 +77,17 @@ export default class index extends React.Component {
             <div className="col-12">
               <h3 className="heading-card-admin">Alamat Konsumen</h3>
             </div>
+            <div className="col-12">
+                <label className="label-card-admin">Katagori Pelanggan</label>
+              </div>
+              <div className="col-12" style={{marginBottom:'20px'}}>
+                <select className="form-card-second">
+                  <option>Pilih Katagori </option>
+                  <option>Rumah</option>
+                  <option>Restoran Besar</option>
+                  <option>Restoran Kaki Lima</option>
+                </select>
+              </div>
             <div style={{ marginBottom: "20px" }}>
               <div className="col-12">
                 <label className="label-card-admin">Alamat</label>
@@ -96,7 +107,7 @@ export default class index extends React.Component {
                   <label className="label-card-admin">Kode pos</label>
                 </div>
                 <div className="col-12">
-                  <input className="form-card" placeholder="Kode Pos" />
+                  <input className="form-card" style={{background:'#DEDEDE'}} placeholder="Kode Pos" disabled/>
                 </div>
               </div>
               <div className="col-6">
