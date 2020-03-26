@@ -280,6 +280,7 @@ input:active{
     background: white;
     border-radius: 10px;
     padding-bottom: 20px;
+    height: auto;
     margin-top: 20px;
 }
 .produk-img{
