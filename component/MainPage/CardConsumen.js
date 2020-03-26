@@ -2,7 +2,7 @@ import React from "react";
 import ListConsumen from "../Consumen/ListConsumen";
 import axios from "axios";
 import Select from "react-select";
-import swal from 'sweetalert'
+import swal from "sweetalert";
 export default class index extends React.Component {
   constructor() {
     super();
@@ -70,6 +70,7 @@ export default class index extends React.Component {
       detail_alamat,
       jenis_usaha
     } = this.state;
+
     let data = {
       no_telp,
       nama,
@@ -79,11 +80,14 @@ export default class index extends React.Component {
       jenis_usaha,
       id_kelurahan: kelurahan.value.split(" ")[0]
     };
+    
     axios
       .post(`${process.env.NEXT_PUBLIC_API_URL}konsumen`, data)
       .then(res =>
         res.data.status == 200
-          ? swal("Berhasil", "Input Consumen Berhasil", "success").then(() => location.reload())
+          ? swal("Berhasil", "Input Consumen Berhasil", "success").then(() =>
+              location.reload()
+            )
           : swal("Berhasil", "Input Consumen Berhasil", "warning")
       )
       .catch(err => console.log(err));
