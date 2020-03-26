@@ -1,13 +1,18 @@
 import React from "react";
 import ListConsumen from "../Consumen/ListConsumen";
 import axios from "axios";
+import Select from "react-select";
+
 export default class index extends React.Component {
   constructor() {
     super();
     this.state = {
       tab: "input",
-      consumens: []
+      consumens: [],
+      kelurahans: [],
+      kelurahan: ""
     };
+    this.getKelurahan = this.getKelurahan.bind(this);
   }
 
   componentDidMount() {
@@ -16,6 +21,25 @@ export default class index extends React.Component {
       .then(res => this.setState({ consumens: res.data.values }))
       .catch(err => console.log(err));
   }
+
+  getKelurahan = e => {
+    let search = e.target.value;
+    if (search.length > 4) {
+      axios
+        .get(`${process.env.NEXT_PUBLIC_API_URL}kelurahans/fkel/${search}`)
+        .then(res => {
+          let filtered = [];
+          res.data.values.map(kelurahan =>
+            filtered.push({
+              value: kelurahan.id+' '+kelurahan.kodepos,
+              label: kelurahan.kelurahan+' - '+kelurahan.kabupaten
+            })
+          );
+          this.setState({ kelurahans: filtered });
+        })
+        .catch(err => console.log(err));
+    }
+  };
 
   FormConsumen() {
     return (
@@ -78,16 +102,16 @@ export default class index extends React.Component {
               <h3 className="heading-card-admin">Alamat Konsumen</h3>
             </div>
             <div className="col-12">
-                <label className="label-card-admin">Katagori Pelanggan</label>
-              </div>
-              <div className="col-12" style={{marginBottom:'20px'}}>
-                <select className="form-card-second">
-                  <option>Pilih Katagori </option>
-                  <option>Rumah</option>
-                  <option>Restoran Besar</option>
-                  <option>Restoran Kaki Lima</option>
-                </select>
-              </div>
+              <label className="label-card-admin">Katagori Pelanggan</label>
+            </div>
+            <div className="col-12" style={{ marginBottom: "20px" }}>
+              <select className="form-card-second">
+                <option>Pilih Katagori </option>
+                <option>Rumah</option>
+                <option>Restoran Besar</option>
+                <option>Restoran Kaki Lima</option>
+              </select>
+            </div>
             <div style={{ marginBottom: "20px" }}>
               <div className="col-12">
                 <label className="label-card-admin">Alamat</label>
@@ -107,7 +131,13 @@ export default class index extends React.Component {
                   <label className="label-card-admin">Kode pos</label>
                 </div>
                 <div className="col-12">
-                  <input className="form-card" style={{background:'#DEDEDE'}} placeholder="Kode Pos" disabled/>
+                  <input
+                    className="form-card"
+                    style={{ background: "#DEDEDE" }}
+                    placeholder="Kode Pos"
+                    value={this.state.kelurahan && this.state.kelurahan.value.split(' ')[1]}
+                    disabled
+                  />
                 </div>
               </div>
               <div className="col-6">
@@ -115,7 +145,12 @@ export default class index extends React.Component {
                   <label className="label-card-admin">Kelurahan</label>
                 </div>
                 <div className="col-12">
-                  <input className="form-card" placeholder="Kelurahan" />
+                  <Select
+                    value={this.state.kelurahan}
+                    onChange={value => this.setState({ kelurahan: value })}
+                    onKeyDown={e => this.getKelurahan(e)}
+                    options={this.state.kelurahans}
+                  />
                 </div>
               </div>
             </div>
@@ -124,7 +159,12 @@ export default class index extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <button className="btn-input-customer">Masukan Data</button>
+                <button
+                  className="btn-input-customer"
+                  onClick={() => console.log(this.state)}
+                >
+                  Masukan Data
+                </button>
               </div>
             </div>
           </div>
