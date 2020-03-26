@@ -165,130 +165,123 @@ export default class index extends React.Component {
     }
     ListConsumen() {
         return (
-            <div hidden={this.state.tab == 'input'} className="container">
+            <div hidden={this.state.tab == 'input'} style={{paddingTop:'10px'}} className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div style={{ marginBottom: '40px' }}>
-                            <div className="col-12">
-                                <h3 className="heading-card-admin">Masukan Info Umum Produk</h3>
+                        <h3 className="heading-card-admin" style={{textAlign:'center',marginBottom:'20px'}}>Katalog Pasar</h3>
+                    </div>
+                </div>
+                <div className="">
+                    <div className="row">
+                        <div className="col-4">
+                            <div className="card-product">
+                                <div className="">
+                                   <img src="/static/background/bg-1.svg" className="produk-img"/>
+                                </div>
+                                <div className="row container" style={{paddingLeft:'10px'}}>
+                                    <div className="col-12">
+                                        <label className="label-head-card">Sayuran 1 ikat</label>
+                                    </div>
+                                    <div className="col-12">
+                                        <p className="paragraph-card">wkwkwkkwkwkwkwkwk</p>
+                                    </div>
+                                </div>
+
+                                <div className="row container" style={{paddingLeft:'10px'}}>
+                                    <div className="col-8">
+                                        <label className="label-price-card">Rp. 30.000/200gr</label>
+                                    </div>
+                                    <div className="col-1">
+                                        <label className="label-price-card">stok/Tersedia</label>
+                                    </div>
+                                </div>
+                                <div className="row container" style={{paddingLeft:'10px',marginLeft:'5%'}}>
+                                    <div className="col-4">
+                                        <img src="/static/Icon/min.svg"/>
+                                    </div>
+                                    <div className="col-4">
+                                        <label className="label-price-card">1</label>
+                                    </div>
+                                    <div className="col-4">
+                                        <img src="/static/Icon/max.svg"/>
+                                    </div>
+                                </div>
+                                <div className="row" style={{paddingLeft:'10px'}}>
+                                    <button className="btn-product">Beli Barang</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-4">
+                            <div className="card-product">
+                                <div className="">
+                                   <img src="/static/background/bg-1.svg" className="produk-img"/>
+                                </div>
+                                <div className="row container" style={{paddingLeft:'10px'}}>
+                                    <div className="col-12">
+                                        <label className="label-head-card">Sayuran 1 ikat</label>
+                                    </div>
+                                    <div className="col-12">
+                                        <p className="paragraph-card">wkwkwkkwkwkwkwkwk</p>
+                                    </div>
+                                </div>
+
+                                <div className="row container" style={{paddingLeft:'10px'}}>
+                                    <div className="col-8">
+                                        <label className="label-price-card">Rp. 30.000/200gr</label>
+                                    </div>
+                                    <div className="col-1">
+                                        <label className="label-price-card">stok/Tidak Tersedia</label>
+                                    </div>
+                                </div>
+
+                                <div className="row" style={{paddingLeft:'10px'}}>
+                                    <button className="btn-product-non">Tidak Tersedia</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-4">
+                            <div className="card-product">
+                                <div className="">
+                                   <img src="/static/background/bg-1.svg" className="produk-img"/>
+                                </div>
+                                <div className="row container" style={{paddingLeft:'10px'}}>
+                                    <div className="col-12">
+                                        <label className="label-head-card">Sayuran 1 ikat</label>
+                                    </div>
+                                    <div className="col-12">
+                                        <p className="paragraph-card">wkwkwkkwkwkwkwkwk</p>
+                                    </div>
+                                </div>
+
+                                <div className="row container" style={{paddingLeft:'10px'}}>
+                                    <div className="col-8">
+                                        <label className="label-price-card">Rp. 30.000/200gr</label>
+                                    </div>
+                                    <div className="col-1">
+                                        <label className="label-price-card">stok/Tersedia</label>
+                                    </div>
+                                </div>
+                                <div className="row container" style={{paddingLeft:'10px',marginLeft:'5%'}}>
+                                    <div className="col-4">
+                                        <img src="/static/Icon/min.svg"/>
+                                    </div>
+                                    <div className="col-4">
+                                        <label className="label-price-card">0</label>
+                                    </div>
+                                    <div className="col-4">
+                                        <img src="/static/Icon/max.svg"/>
+                                    </div>
+                                </div>
+                                <div className="row" style={{paddingLeft:'10px'}}>
+                                    <button className="btn-product-nul">Beli Barang</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div className="col-12">
-                        <table className="table-consumen">
-                            <thead>
-                                <tr>
-                                    <td style={{ width: '30%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '5px' }}>
-                                        <div className="row">
-                                            <label className="label-tabel">Nama Konsumen</label>
-                                        </div>
-
-                                    </td>
-                                    <td style={{ width: '20%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-                                        <div>
-                                            <label className="label-tabel">No Telp</label>
-                                        </div>
-                                    </td>
-                                    <td style={{ width: '40%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-                                        <div>
-                                            <label className="label-tabel">Alamat</label>
-                                        </div>
-                                    </td>
-                                    <td style={{ width: '10%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style={{ width: '30%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '5px' }}>
-                                        <div className="row">
-                                            <label className="list-tabel">Muhammad Bredx  wkwkwkkwkwkwkwkwkkwkw</label>
-                                        </div>
-
-                                    </td>
-                                    <td style={{ width: '20%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-
-                                        <label className="list-tabel">0819935775322</label>
-                                    </td>
-                                    <td style={{ width: '40%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-
-                                        <label className="list-tabel">Jalan Kampung Melayu Besar Mesjid , Kebon Baru, 12090</label>
-                                    </td>
-                                    <td style={{ width: '10%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-                                        <div>
-                                            <button className="edit-btn-table">
-                                                Ubah
-                                            </button>
-                                        </div>
-                                        <div>
-                                            <button className="delete-btn-table">
-                                                Hapus
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <table className="table-consumen">
-                            <thead>
-                                <tr>
-                                    <td style={{ width: '30%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '5px' }}>
-                                        <div className="row">
-                                            <label className="label-tabel">Nama Konsumen</label>
-                                        </div>
-
-                                    </td>
-                                    <td style={{ width: '20%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-                                        <div>
-                                            <label className="label-tabel">No Telp</label>
-                                        </div>
-                                    </td>
-                                    <td style={{ width: '40%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-                                        <div>
-                                            <label className="label-tabel">Alamat</label>
-                                        </div>
-                                    </td>
-                                    <td style={{ width: '10%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style={{ width: '30%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '5px' }}>
-                                        <div className="row">
-                                            <label className="list-tabel">Muhammad Bredx  wkwkwkkwkwkwkwkwkkwkw</label>
-                                        </div>
-
-                                    </td>
-                                    <td style={{ width: '20%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-
-                                        <label className="list-tabel">0819935775322</label>
-                                    </td>
-                                    <td style={{ width: '40%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-
-                                        <label className="list-tabel">Jalan Kampung Melayu Besar Mesjid , Kebon Baru, 12090</label>
-                                    </td>
-                                    <td style={{ width: '10%', borderRight: '1px solid #BEB1AF', paddingLeft: '20px', paddingRight: '20px' }}>
-                                        <div>
-                                            <button className="edit-btn-table">
-                                                Ubah
-                                            </button>
-                                        </div>
-                                        <div>
-                                            <button className="delete-btn-table">
-                                                Hapus
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
+                
             </div>
         )
     }
