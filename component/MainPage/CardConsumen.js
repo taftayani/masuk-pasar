@@ -12,7 +12,7 @@ export default class index extends React.Component {
 
   componentDidMount() {
     axios
-      .get("https://api.masukpasar.id/konsumens")
+      .get(`${process.env.NEXT_PUBLIC_API_URL}konsumens`)
       .then(res => this.setState({ consumens: res.data.values }))
       .catch(err => console.log(err));
   }
