@@ -83,7 +83,17 @@ const List = ({ consumen }) => (
               paddingRight: "20px"
             }}
           >
-            <label className="list-tabel">{consumen.address || "-"}</label>
+            <label className="list-tabel">
+              {consumen.alamat.length == 1 &&
+                `${consumen.alamat[0].alamat_detail}, ${consumen.alamat[0].kecamatan},  ${consumen.alamat[0].kelurahan}`}
+              {consumen.alamat.length > 1 && (
+                <ul>
+                  {consumen.alamat.map(alamat => (
+                    <li>{`${alamat.alamat_detail}, ${alamat.kecamatan}, ${alamat.kelurahan}`}</li>
+                  ))}
+                </ul>
+              )}
+            </label>
           </td>
           <td
             style={{
